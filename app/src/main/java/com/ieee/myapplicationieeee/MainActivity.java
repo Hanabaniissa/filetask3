@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"age:"+ String.valueOf(age),Toast.LENGTH_LONG).show();
 
         Intent myitent=new Intent(this,MainActivity2.class);
+        Bundle b=new Bundle();
+        b.putString("Birthofyear", etAge.getText().toString());
+        myitent.putExtras(b);
+
+
         startActivity(myitent);;
     }
 
